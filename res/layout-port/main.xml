@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+		android:id="@+id/layoutPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+	    <SurfaceView
+		    android:id="@+id/preview"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent" />
+	    
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="36"
+        android:textColor="#33FFFFFF"
+        android:textSize="80sp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_status_bg"
+        android:padding="10dp"
+        android:text="Wait for IOIO"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:padding="20dp" >
+
+        <ToggleButton
+            android:id="@+id/tbExposureLock"
+	        android:layout_width="60dp"
+	        android:layout_height="60dp"
+	        android:layout_gravity="bottom"
+            android:layout_marginRight="10dp"
+	        android:background="@drawable/selector_button_exposure"
+	        android:text="ToggleButton"
+	        android:textColor="#FFFFFF"
+	        android:textSize="16sp"
+	        android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/selector_button_capture"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Start"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnViewer"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/selector_button_capture"
+            android:text="Gallery"
+            android:textSize="16sp"
+        	android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</RelativeLayout>
