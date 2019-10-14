@@ -1,0 +1,1 @@
+include ':app', ':IOIOLibAndroid', ':IOIOLibCore', ':IOIOLibAndroidAccessory', ':IOIOLibAndroidBluetooth'

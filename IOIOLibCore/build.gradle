@@ -1,0 +1,42 @@
+apply plugin: 'java'
+
+//task generateVersionFile(type: GenerateVersion) {
+//  version = versionString
+//  outputFile = file("$project.buildDir/classes/main/version.properties")
+//}
+//
+//tasks.classes.dependsOn generateVersionFile
+//
+//javadoc {
+//  source = fileTree(dir: 'src/main/java').matching { include 'ioio/lib/api/**' }
+//}
+//
+//task javadocJar(type: Jar) {
+//    classifier = 'javadoc'
+//    from javadoc
+//}
+//
+//task sourcesJar(type: Jar) {
+//    classifier = 'sources'
+//    from sourceSets.main.allSource
+//}
+//
+//artifacts {
+//    archives javadocJar, sourcesJar
+//}
+
+class GenerateVersion extends DefaultTask {
+    @Input
+    String version
+
+    @OutputFile
+    File outputFile
+
+    @TaskAction
+    void generate() {
+        def file = getOutputFile()
+        def properties = new Properties()
+        properties.setProperty("version", version)
+        properties.store(file.newWriter(), null)
+    }
+}

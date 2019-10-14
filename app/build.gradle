@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.inex.ioiocamera360"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 2
+        versionName "1.1"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'org.jcodec:jcodec:0.1.6-3'
+//    implementation 'com.github.jcodec:jcodec:d0eea286ce9b272938ba99f47c174b9cfe9f5326'
+    implementation project(path: ':IOIOLibAndroid')
+    implementation project(path: ':IOIOLibAndroidAccessory')
+    implementation project(path: ':IOIOLibAndroidBluetooth')
+}
